@@ -5,8 +5,8 @@ files:
     destination: /tmp/release/
 hooks:
   BeforeInstall:
-    - Location: scripts/beforeInstall.sh
+    - location: scripts/beforeInstall.sh
       runas: root
   Install:
-    - Location: scripts/copy.sh
+    - location: scripts/copy.sh
       runas: root
