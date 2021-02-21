@@ -1,7 +1,12 @@
 version: 0.0
 os: linux
 files:
-  - source: ./var/www/html/index.html
-    destination: /var/www/html
-    overwrite: true
-
+  - source: ./
+    destination: /tmp/release/
+hooks:
+  BeforeInstall:
+    - Location: scripts/beforeInstall.sh
+      runas: root
+  Install:
+    - Location: scripts/copy.sh
+      runas: root
